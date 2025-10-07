@@ -23,11 +23,11 @@ def get_db():
         db.close()
 
 # Crear usuario
-@app.post("/usuarios/", response_model=schemas.UsuarioOut)
+@app.post("/usuario/", response_model=schemas.UsuarioOut)
 def crear_usuario(usuario: schemas.UsuarioCreate, db: Session = Depends(get_db)):
     return crud.crear_usuario(db=db, usuario=usuario)
 
 # Obtener usuarios
-@app.get("/usuarios/", response_model=list[schemas.UsuarioOut])
+@app.get("/usuario/", response_model=list[schemas.UsuarioOut])
 def obtener_usuarios(db: Session = Depends(get_db)):
     return crud.obtener_usuarios(db)

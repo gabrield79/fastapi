@@ -2,11 +2,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-# Reemplaza estos datos con los de tu servidor PhpMyAdmin
-DATABASE_URL = "mysql+pymysql://usuario:contraseña@IP_o_dominio/nombre_basedatos"
 
-# Ejemplo:
-# DATABASE_URL = "mysql+pymysql://root:12345@192.168.1.100/mi_base"
+DATABASE_URL = "mysql+pymysql://admin:OuAWM0J0Sn6wCE3aYNsB@bogsigns.usbtopia.usbbog.edu.co:3306/bogsings"
+
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
